@@ -35,9 +35,8 @@ The main prompts and tasks given to the AI tool included:
 3. Help reproduce the CUB-200 experiments from the paper.
 4. Help configure the Python/PyTorch environment for the replication.
 5. Debug errors encountered while running the original repository.
-6. Help implement a faster/batched version of the experiment while preserving the experimental methodology.
-7. Help generate the result graphs and calculate the corresponding statistics.
-8. Help interpret and validate the replication results.
+6. Help generate the result graphs and calculate the corresponding statistics.
+7. Help interpret and validate the replication results.
 
 The prompts were used as development, debugging, explanation, and documentation assistance rather than as a substitute for experimental verification.
 
@@ -59,6 +58,4 @@ Experimental code was executed locally and the generated results were checked us
 
 The generated CSV files and figures were inspected and validated after execution.
 
-AI-generated explanations and documentation were also reviewed and edited to ensure that the final submission accurately represented the experiments that were actually performed.
-
-The final experimental results and project decisions were reviewed by the student before submission.
+The final experimental results and project decisions were reviewed by the team before submission.
