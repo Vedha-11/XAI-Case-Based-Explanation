@@ -1,0 +1,57 @@
+# Virtual Environments
+xai_env/
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook Checkpoints & Cache
+.ipynb_checkpoints/
+.jupyter/
+*/.ipynb_checkpoints/
+*/.jupyter/
+
+# Datasets & Large Raw Files
+data/
+CUB_200_2011/
+*.tgz
+*.tar.gz
+*.zip
+*.rar
+*/data/*
+!*/data/README.md
+
+# PyTorch & Model Weights / Checkpoints
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.onnx
+*.h5
+*.hdf5
+weights/
+*/weights/*.pth
+
+# OS & IDE Generated Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Environment Variables & Secrets
+.env
+.env.*
+secrets/
+*.pem
+*.key
+*.token
