@@ -2,10 +2,9 @@
 
 ## 1. AI Tools Used
 
-The following AI tools were used during the development of this project:
+The following AI tool was used during the development of this project:
 
 - ChatGPT
-- Antigravity
 
 ---
 
@@ -25,21 +24,11 @@ ChatGPT was used for:
 - Generating and validating result visualizations.
 - Organizing the Phase 1 replication documentation.
 
-### Antigravity
-
-Antigravity was used for:
-
-- Organizing the existing project structure.
-- Preparing the project for GitHub submission.
-- Configuring Git-related files and repository structure.
-- Organizing experiment results, figures, and documentation.
-- Assisting with Git commits and GitHub repository management.
-
 ---
 
 ## 3. Prompts / Tasks Used
 
-The main prompts and tasks given to the AI tools included:
+The main prompts and tasks given to the AI tool included:
 
 1. Explain the selected research paper in detail.
 2. Explain the XAI methods used in the paper.
@@ -49,8 +38,6 @@ The main prompts and tasks given to the AI tools included:
 6. Help implement a faster/batched version of the experiment while preserving the experimental methodology.
 7. Help generate the result graphs and calculate the corresponding statistics.
 8. Help interpret and validate the replication results.
-9. Organize the project into a GitHub-ready structure.
-10. Assist with Git and GitHub repository management.
 
 The prompts were used as development, debugging, explanation, and documentation assistance rather than as a substitute for experimental verification.
 
