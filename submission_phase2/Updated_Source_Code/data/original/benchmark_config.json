@@ -1,0 +1,20 @@
+{
+  "benchmark_name": "XAI Phase 2 Full 500-Image Benchmark",
+  "date_executed": "2026-10-29 23:07:07",
+  "random_seed": 42,
+  "sample_size_N": 500,
+  "device": "cuda:0",
+  "gpu_name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "pytorch_version": "2.7.1+cu128",
+  "torchvision_version": "0.22.1+cu128",
+  "architecture": "SavedNetC (ResNet-34 backbone with nn.Linear(512, 200))",
+  "checkpoint_file": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\XAI-Case-Based-Explanation\\original_repo\\Expt 1\\CUB\\weights\\cnnNORMAL_best.pth",
+  "dataset": "CUB-200-2011",
+  "eval_split": "official test split (is_training_img == 0), first 500 images",
+  "nearest_neighbor_pool_size_k": 10,
+  "saliency_candidate_threshold_alpha": 5.0,
+  "perturbation_baseline": "GaussianBlur(radius=15.0)",
+  "perturbation_steps": 11,
+  "total_duration_seconds": 244.4,
+  "mean_latency_per_query_ms": 488.79
+}

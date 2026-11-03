@@ -29,6 +29,8 @@ CUB_200_2011/
 *.rar
 */data/*
 !*/data/README.md
+!submission_phase2/Updated_Source_Code/data/**
+_archive_old_tasks/
 
 # PyTorch & Model Weights / Checkpoints
 *.pth
