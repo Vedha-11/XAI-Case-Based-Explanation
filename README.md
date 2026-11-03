@@ -10,23 +10,7 @@
 
 ---
 
-## 1. Executive Summary & Mandatory Submission Deliverables
-
-This repository contains the complete implementation, forensic audit, research gap resolution, experimental benchmark, presentation materials, and reproduction code for **Phase 2 Course Project Evaluation (Total Marks: 20)**.
-
-In strict compliance with the Phase 2 Submission Guidelines, all required deliverables are organized inside [`submission_phase2/`](submission_phase2/):
-
-| Guideline Deliverable | Location in Repository | Description & Contents |
-| :--- | :--- | :--- |
-| **A. Video Presentation** | [`submission_phase2/A_Video_Presentation_Assets/`](submission_phase2/A_Video_Presentation_Assets/) | • 12-slide master presentation: [`Phase_2_Project_Presentation.pptx`](submission_phase2/A_Video_Presentation_Assets/Phase_2_Project_Presentation.pptx)<br/>• 4-page printable presentation guide: [`6_Member_Team_Presentation_Guide.pdf`](submission_phase2/A_Video_Presentation_Assets/6_Member_Team_Presentation_Guide.pdf)<br/>• Spoken team script: [`6_Member_Team_Presentation_Script.md`](submission_phase2/A_Video_Presentation_Assets/6_Member_Team_Presentation_Script.md)<br/>• Interactive web slides: [`presentation_slides.html`](submission_phase2/A_Video_Presentation_Assets/presentation_slides.html) |
-| **B. Original Research Article** | [`submission_phase2/B_Original_Research_Article/`](submission_phase2/B_Original_Research_Article/) | • Full original research paper: [`Original_Research_Article_IJCAI2023_Kenny_et_al.pdf`](submission_phase2/B_Original_Research_Article/Original_Research_Article_IJCAI2023_Kenny_et_al.pdf) (Kenny et al., IJCAI 2023, pp. 3142–3150)<br/>• Complete 7-page appendix: [`Original_Research_Article_Appendix_IJCAI2023.pdf`](submission_phase2/B_Original_Research_Article/Original_Research_Article_Appendix_IJCAI2023.pdf) |
-| **C. Experimental Results & Comparison** | [`submission_phase2/C_Experimental_Results_and_Comparison/`](submission_phase2/C_Experimental_Results_and_Comparison/) | • Standalone 9-page PDF: [`Experimental_Results_and_Comparison.pdf`](submission_phase2/C_Experimental_Results_and_Comparison/Experimental_Results_and_Comparison.pdf)<br/>• Paper extracts from Pages 1, 2, 5, 6 with exact page citations.<br/>• Master 5-column side-by-side comparison table.<br/>• Literature citations (Jiang et al., TIP 2021; Hariharan et al., CVPR 2015; Petsiuk et al., BMVC 2018).<br/>• Master cross-reference table indexing every metric to its exact location in the original paper PDF. |
-| **D. Updated Source Code** | [`submission_phase2/Updated_Source_Code/`](submission_phase2/Updated_Source_Code/) | • Complete, runnable modular codebase (`models/`, `methods/`, `evaluation/`)<br/>• Code modifications document: [`MODIFIED_FILES.md`](submission_phase2/Updated_Source_Code/MODIFIED_FILES.md)<br/>• Standalone reproduction script: [`reproduce_results.py`](submission_phase2/Updated_Source_Code/reproduce_results.py)<br/>• Standalone downloadable code zip: `Updated_Source_Code.zip` |
-| **Submission Checklist** | [`submission_phase2/SUBMISSION_CHECKLIST_AND_GOOGLE_FORM_GUIDE.md`](submission_phase2/SUBMISSION_CHECKLIST_AND_GOOGLE_FORM_GUIDE.md) | Verification checklist and field-by-field instructions for the [Google Form](https://forms.gle/nSe7zwsssY4gPC7y8). |
-
----
-
-## 2. The Two Core Research Gaps & Proposed Improvements
+## 1. The Two Core Research Gaps & Proposed Improvements
 
 In visual classification, deep neural networks are black boxes. Case-Based Reasoning explains a prediction by retrieving a similar past training image. Kenny et al. (IJCAI 2023) proposed a **Twin-Explanation framework**: retrieving an exemplar bird and drawing bounding boxes on both query and exemplar birds to highlight the shared anatomical feature.
 
@@ -46,7 +30,7 @@ However, our technical audit revealed **two foundational research gaps** in thei
 
 ---
 
-## 3. Verified Empirical Results (500 CUB-200 Test Images)
+## 2. Verified Empirical Results (500 CUB-200 Test Images)
 
 All experiments were evaluated on the pretrained ResNet-34 classifier (`SavedNetC`, 83.60% top-1 accuracy) kept 100% frozen (strictly post-hoc) across the first 500 test images of Caltech-UCSD Birds (`CUB-200-2011`, seed=42):
 
@@ -72,7 +56,7 @@ Statistical Significance:                                      p = 1.22 × 10⁻
 
 ---
 
-## 4. Execution Procedure, Dependencies & Reproduction Steps
+## 3. Execution Procedure, Dependencies & Reproduction Steps
 
 ### Prerequisites
 - Python 3.9, 3.10, or 3.11
@@ -110,36 +94,22 @@ To run live multi-scale feature extraction, saliency generation, and nearest-nei
 python submission_phase2/Updated_Source_Code/run_benchmark.py
 ```
 
-### Step 4: Rebuilding Deliverables
+### Step 4: Rebuilding Comparison Report
 ```bash
 # To recompile the 9-page Deliverable C Comparison PDF:
 python submission_phase2/C_Experimental_Results_and_Comparison/build_comparison_pdf.py
-
-# To recompile the 12-slide Deliverable A PowerPoint Presentation (.pptx):
-python submission_phase2/A_Video_Presentation_Assets/generate_presentation_pptx.py
-
-# To recompile the 4-page Deliverable A Team Presentation Guide (.pdf):
-python _archive_old_tasks/build_team_presentation_pdf.py
 ```
 
 ---
 
-## 5. Code Structure & Identification of Modified/New Files
+## 4. Code Structure & Identification of Modified/New Files
 
 ```
 XAI-Case-Based-Explanation/
 ├── README.md                                     # Root project documentation & reproduction guide
 ├── .gitignore                                    # Git ignore rules (virtual environments, caches, archives)
 ├── submission_phase2/                            # MASTER CANONICAL SUBMISSION DIRECTORY
-│   ├── 00_START_HERE_SUBMISSION_GUIDE.md         # Submission overview & quick-start guide
-│   ├── SUBMISSION_CHECKLIST_AND_GOOGLE_FORM_GUIDE.md # Pre-submission checklist & form answers
-│   ├── Updated_Source_Code.zip                   # Standalone packaged code zip for Google Form
-│   ├── A_Video_Presentation_Assets/              # Video presentation deliverables
-│   │   ├── Phase_2_Project_Presentation.pptx     # 12-slide master presentation (speaker notes embedded)
-│   │   ├── 6_Member_Team_Presentation_Guide.pdf  # 4-page clean printable presentation guide
-│   │   ├── 6_Member_Team_Presentation_Script.md  # Word-for-word spoken presentation script
-│   │   ├── presentation_slides.html              # Interactive web presentation deck
-│   │   └── figures/                              # Extracted paper figures & empirical plots
+│   ├── Updated_Source_Code.zip                   # Standalone packaged code zip for submission
 │   ├── B_Original_Research_Article/              # Original paper deliverables
 │   │   ├── Original_Research_Article_IJCAI2023_Kenny_et_al.pdf # Kenny et al. (IJCAI 2023)
 │   │   └── Original_Research_Article_Appendix_IJCAI2023.pdf    # 7-page conference appendix
@@ -164,7 +134,7 @@ XAI-Case-Based-Explanation/
 
 ---
 
-## 6. Literature Citations & Supporting Articles
+## 5. Literature Citations & Supporting Articles
 
 1. **Original Research Article (Phase 1 Baseline):**  
    Kenny, E. M., Delaney, E., & Keane, M. T. (2023). *Advancing Post-Hoc Case-Based Explanation with Feature Highlighting.* In **Proceedings of the 32nd International Joint Conference on Artificial Intelligence (IJCAI 2023)**, pages 3142–3150. DOI: [10.24963/ijcai.2023/350](https://doi.org/10.24963/ijcai.2023/350).
